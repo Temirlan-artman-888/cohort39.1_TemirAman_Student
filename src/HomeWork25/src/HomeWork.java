@@ -1,7 +1,8 @@
 import lesson_25.IncorrectFigureSizeException;
 
 public class HomeWork {
-    public static void main(String[] args) throws IncorrectFigureSizeException {}
+    public static void main(String[] args) throws IncorrectFigureSizeException {
+    }
 
     public static double calculateRoundCircleArea(double[] radius) throws IncorrectFigureSizeException {
         if (radius.length > 1) {
@@ -18,8 +19,7 @@ public class HomeWork {
 
     public static double calculateRectangleArea(double[] values) throws IncorrectFigureSizeException {
         if (values[0] != values[1]) {
-            throw new IncorrectFigureSizeException("This type of rectangle does not exist due to the rule, " +
-                    "All opposites are equal");
+            throw new IncorrectFigureSizeException("This type of rectangle does not exist due to the rule, " + "All opposites are equal");
         }
         if (values[0] <= 0 || values[1] <= 0 && values.length > 2) {
             throw new IncorrectFigureSizeException("Wrong variables of triangle");
@@ -38,8 +38,7 @@ public class HomeWork {
         }
 
         double semiPerimeter = (triangleValues[0] + triangleValues[1] + triangleValues[2]) / 2;
-        double resultSemiPerimeter = Math.sqrt(semiPerimeter * (semiPerimeter - triangleValues[0]) *
-                (semiPerimeter - triangleValues[1]) * (semiPerimeter - triangleValues[2]));
+        double resultSemiPerimeter = Math.sqrt(semiPerimeter * (semiPerimeter - triangleValues[0]) * (semiPerimeter - triangleValues[1]) * (semiPerimeter - triangleValues[2]));
         System.out.println("Площадь треугольника: " + resultSemiPerimeter);
         return resultSemiPerimeter;
     }
