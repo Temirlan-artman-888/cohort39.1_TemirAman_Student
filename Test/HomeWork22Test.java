@@ -1,0 +1,3 @@
+class HomeWork22Test {
+
+}
